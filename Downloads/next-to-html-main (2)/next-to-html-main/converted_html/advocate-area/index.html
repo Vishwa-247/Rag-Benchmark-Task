@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocate Area - AdvocateKhoj</title>
+    <meta name="description" content="Join AdvocateKhoj to connect with clients seeking legal representation. Showcase your expertise and grow your legal practice.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="../styles/global.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 w-full border-b border-[#001944]/20 bg-white/95 backdrop-blur">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between ">
+            <a href="../index.html" class="flex items-center hover:opacity-85 transition-opacity">
+                <img src="../assets/logo.svg" alt="AdvocateKhoj Logo" class="h-14 w-auto sm:h-16" onerror="this.style.display='none'">
+                <span class="text-xl font-bold text-[#00377b] ml-2">AdvocateKhoj</span>
+            </a>
+            <nav class="hidden md:flex items-center space-x-6 ">
+                <a href="../client-area/index.html" class="nav-link">Post a Case</a>
+                <a href="../advocate-area/index.html" class="nav-link active border-[#f17313]">Join as Advocate</a>
+                <a href="../law-colleges/index.html" class="nav-link">Law College</a>
+                <a href="../sawal-jawab/index.html" class="nav-link">Sawal Jawab</a>
+                <a href="../law-library/index.html" class="nav-link">Law Library</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-3 ">
+                <a href="../login/index.html" class="btn btn-login">Log In</a>
+                <a href="../register/index.html" class="btn btn-register">Register</a>
+            </div>
+            <button class="md:hidden text-[#001944]" id="mobile-menu-btn">
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden border-t border-[#001944]/10 bg-white/95 hidden" id="mobile-menu">
+            <nav class="container mx-auto px-4 py-4 space-y-3">
+                <a href="../client-area/index.html" class="block nav-link">Post a Case</a>
+                <a href="../advocate-area/index.html" class="block nav-link">Join as Advocate</a>
+                <a href="../law-colleges/index.html" class="block nav-link">Law College</a>
+                <a href="../sawal-jawab/index.html" class="block nav-link">Sawal Jawab</a>
+                <a href="../law-library/index.html" class="block nav-link">Law Library</a>
+                <div class="pt-4 border-t border-[#001944]/10 space-y-2">
+                    <a href="../login/index.html" class="block w-full btn btn-login text-center">Log In</a>
+                    <a href="../register/index.html" class="block w-full btn btn-register text-center">Register</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Global Top Banner -->
+    <div class="w-full bg-white/80 backdrop-blur-sm border-b border-[#001944]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col lg:flex-row gap-4">
+                <!-- Left Banner -->
+                <div class="flex-1 h-24 bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center ">
+                    <div class="text-center text-gray-500">
+                        <div class="text-sm font-medium">Advertisement Space Available</div>
+                        <div class="text-xs mt-1">550 x 94</div>
+                    </div>
+                </div>
+                <!-- Right Banner -->
+                <div class="flex-1 h-24 bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg flex items-center justify-center ">
+                    <div class="text-center text-gray-500">
+                        <div class="text-sm font-medium">Advertisement Space Available</div>
+                        <div class="text-xs mt-1">550 x 94</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-[#00377b]/10 to-[#d67c40]/10 py-16">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <span class="badge mb-4">Advocate Area</span>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Grow Your Legal Practice Online</h1>
+                    <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+                        Join AdvocateKhoj to connect with clients seeking legal representation. Showcase your expertise, respond to cases, and build your professional reputation.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="../register/index.html?userType=advocate" class="inline-flex items-center justify-center h-10 px-6 text-sm font-medium rounded-md bg-[#00377b] text-white hover:bg-[#00377b]/90 transition-all duration-200 shadow-xs w-full sm:w-auto ">
+                            Register Now
+                        </a>
+                        <a href="../login/index.html?userType=advocate" class="inline-flex items-center justify-center h-10 px-6 text-sm font-medium rounded-md bg-[#d67c40] text-white hover:bg-[#d67c40]/80 transition-all duration-200 shadow-xs w-full sm:w-auto ">
+                            Advocate Log In
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                    <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                        AdvocateKhoj is a "communication platform" that helps consumers find advocates to represent their legal need. By becoming a member of AdvocateKhoj, you can get steady case flow, selective clients and in turn increase your revenues.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Step 1 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        1
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">User Posts a Case</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">A user (client) visits AdvocateKhoj and posts their legal case by filling out a simple questionnaire about their legal situation.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow connector -->
+                        <div class="hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2 lg:bottom-auto lg:top-1/2 lg:-right-4 lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 z-10">
+                            <svg class="h-6 w-6 text-[#00377b] rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        2
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Authentication & Database</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">The case is authenticated and stored securely in our database. Member advocates can then view the case details.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow connector -->
+                        <div class="hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2 lg:bottom-auto lg:top-1/2 lg:-right-4 lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 z-10">
+                            <svg class="h-6 w-6 text-[#00377b] rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        3
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Advocates View Cases</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">Member advocates log in and browse available cases. They can view case details, client requirements, and decide which cases match their expertise.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow connector -->
+                        <div class="hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2 lg:bottom-auto lg:top-1/2 lg:-right-4 lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 z-10">
+                            <svg class="h-6 w-6 text-[#00377b] rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        4
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">Advocate Replies to Case</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">Interested advocates send responses to the user's case, explaining their approach, experience, and how they can help.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow connector -->
+                        <div class="hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2 lg:bottom-auto lg:top-1/2 lg:-right-4 lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 z-10">
+                            <svg class="h-6 w-6 text-[#00377b] rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        5
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">User Views Advocate Profile</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">The user receives responses and can view detailed profiles of advocates including their qualifications, experience, case history, and expertise.</p>
+                            </div>
+                        </div>
+                        <!-- Arrow connector -->
+                        <div class="hidden lg:block absolute -bottom-4 left-1/2 transform -translate-x-1/2 lg:bottom-auto lg:top-1/2 lg:-right-4 lg:left-auto lg:-translate-y-1/2 lg:translate-x-0 z-10">
+                            <svg class="h-6 w-6 text-[#00377b] rotate-90 lg:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"></path></svg>
+                        </div>
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="relative">
+                        <div class="bg-white border-2 border-gray-200 rounded-xl py-6 flex flex-col gap-6 hover:shadow-lg transition-shadow hover:border-[#001944]/20 h-full shadow-sm">
+                            <div class="px-6">
+                                <div class="flex items-center justify-between mb-4 ">
+                                    <div class="h-14 w-14 rounded-full bg-[#00377b] text-white flex items-center justify-center text-xl font-bold hover:bg-[#00377b]/90 ">
+                                        6
+                                    </div>
+                                    <div class="h-12 w-12 rounded-full bg-[#00377b]/10 flex items-center justify-center hover:bg-[#00377b]/90 ">
+                                        <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                                    </div>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900">User Selects Best Advocate</h3>
+                            </div>
+                            <div class="px-6">
+                                <p class="text-gray-600 text-sm leading-relaxed">After reviewing advocate profiles and responses, the user selects the advocate they feel is best suited for their case and engages them directly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Join AdvocateKhoj Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Join AdvocateKhoj</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl mx-auto">Benefits of being part of India's trusted legal platform</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-12 w-12 rounded-lg bg-[#00377b]/10 flex items-center justify-center mb-4 hover:bg-[#00377b]/90 ">
+                            <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Access to Clients</h3>
+                        <p class="text-gray-600 text-sm">Connect with clients actively seeking legal representation across various practice areas.</p>
+                    </div>
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-12 w-12 rounded-lg bg-[#00377b]/10 flex items-center justify-center mb-4 hover:bg-[#00377b]/90 ">
+                            <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Professional Profile</h3>
+                        <p class="text-gray-600 text-sm">Showcase your credentials, experience, and expertise with a comprehensive verified profile.</p>
+                    </div>
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-12 w-12 rounded-lg bg-[#00377b]/10 flex items-center justify-center mb-4 hover:bg-[#00377b]/90 ">
+                            <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Grow Your Practice</h3>
+                        <p class="text-gray-600 text-sm">Expand your client base and build your reputation through client reviews and successful cases.</p>
+                    </div>
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <div class="h-12 w-12 rounded-lg bg-[#00377b]/10 flex items-center justify-center mb-4 hover:bg-[#00377b]/90 ">
+                            <svg class="h-6 w-6 text-[#00377b]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <h3 class="text-lg font-semibold mb-2">Verified Platform</h3>
+                        <p class="text-gray-600 text-sm">Join a trusted network where all advocates are BAR Council verified and clients are serious.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Membership Plans Section -->
+        <section class="py-16 bg-white">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Membership Plans</h2>
+                    <p class="text-lg text-gray-700 max-w-4xl mx-auto leading-relaxed">
+                        Join India's leading legal platform and expand your practice. Choose a membership plan that suits your professional goals and start connecting with clients actively seeking legal representation.
+                    </p>
+                </div>
+
+                <!-- Eligibility Section -->
+                <div class="bg-white border-2 border-[#001944]/20 rounded-xl mb-12">
+                    <div class="bg-[#00377b]/5 px-6 py-4 border-b border-[#001944]/20 hover:bg-[#00377b]/90">
+                        <h3 class="text-2xl font-bold text-center text-gray-900">Who Can Join AdvocateKhoj?</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-center text-xl font-bold text-[#00377b] mb-6">
+                            Any advocate in good standing with their State BAR Council is eligible to join AdvocateKhoj.
+                        </p>
+                        <div class="max-w-2xl mx-auto space-y-4">
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Simple Process:</strong> Register online, verify your credentials, select a membership plan, and start connecting with clients looking for legal representation.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>What You Get:</strong> Complete profile control, access to verified client cases, secure messaging system, and the ability to showcase your expertise to potential clients across India.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed">
+                                <strong>Quality Assurance:</strong> All advocates are verified through our stringent screening process to maintain the highest standards of professionalism on our platform.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subscription Plans Table -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Subscription Plans</h3>
+                    <p class="text-center text-gray-600 mb-8">We offer the following subscription plans:</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border-2 border-gray-300 bg-white hover:border-gray-400">
+                            <thead>
+                                <tr class="bg-gray-100">
+                                    <th class="border border-gray-300 px-6 py-3 text-left font-semibold text-gray-900">Serial No.</th>
+                                    <th class="border border-gray-300 px-6 py-3 text-left font-semibold text-gray-900">Subscription Plans</th>
+                                    <th class="border border-gray-300 px-6 py-3 text-left font-semibold text-gray-900">Validity</th>
+                                    <th class="border border-gray-300 px-6 py-3 text-left font-semibold text-gray-900">Discount</th>
+                                    <th class="border border-gray-300 px-6 py-3 text-left font-semibold text-gray-900">Net Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-6 py-4 text-center">1.</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-medium">Silver Plan</td>
+                                    <td class="border border-gray-300 px-6 py-4">3 months</td>
+                                    <td class="border border-gray-300 px-6 py-4">-</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-semibold">400 INR + GST*</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-6 py-4 text-center">2.</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-medium">Gold Plan</td>
+                                    <td class="border border-gray-300 px-6 py-4">6 months</td>
+                                    <td class="border border-gray-300 px-6 py-4">12.5%</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-semibold">700 INR + GST*</td>
+                                </tr>
+                                <tr class="hover:bg-gray-50">
+                                    <td class="border border-gray-300 px-6 py-4 text-center">3.</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-medium">Platinum Plan</td>
+                                    <td class="border border-gray-300 px-6 py-4">12 months</td>
+                                    <td class="border border-gray-300 px-6 py-4">25%</td>
+                                    <td class="border border-gray-300 px-6 py-4 font-semibold">1200 INR + GST*</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="text-sm text-gray-600 mt-3">*18% GST</p>
+                    </div>
+                </div>
+
+                <!-- CTA Button -->
+                <div class="text-center">
+                    <a href="../register/index.html?userType=advocate" class="inline-flex items-center justify-center h-10 px-6 text-sm font-medium rounded-md bg-[#00377b] text-white hover:bg-[#00377b]/90 transition-all duration-200 shadow-xs ">
+                        Register Now as Advocate
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                    <!-- Basic Plan -->
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold mb-2">Basic</h3>
+                        <div class="text-3xl font-bold text-[#00377b] mb-1">₹2,999</div>
+                        <p class="text-gray-500 mb-6">6 months</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Profile listing on platform
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Up to 10 case responses per month
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Basic messaging with clients
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Email support
+                            </li>
+                        </ul>
+                        <a href="../register/index.html?userType=advocate&plan=basic" class="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-md border bg-background shadow-xs hover:bg-[#f17313] hover:text-[#f17313]-foreground transition-all duration-200 w-full bg-transparent ">Get Started</a>
+                    </div>
+                    <!-- Professional Plan -->
+                    <div class="card p-6 hover:shadow-lg transition-shadow border-2 border-[#00377b] relative">
+                        <span class="absolute -top-3 left-1/2 transform -translate-x-1/2 badge">Recommended</span>
+                        <h3 class="text-xl font-bold mb-2">Professional</h3>
+                        <div class="text-3xl font-bold text-[#00377b] mb-1">₹4,999</div>
+                        <p class="text-gray-500 mb-6">12 months</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Enhanced profile with priority listing
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Unlimited case responses
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Priority messaging with clients
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Featured in search results
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Monthly performance analytics
+                            </li>
+                        </ul>
+                        <a href="../register/index.html?userType=advocate&plan=professional" class="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-md bg-[#00377b] text-white hover:bg-[#00377b]/90 transition-all duration-200 shadow-xs w-full ">Get Started</a>
+                    </div>
+                    <!-- Premium Plan -->
+                    <div class="card p-6 hover:shadow-lg transition-shadow">
+                        <h3 class="text-xl font-bold mb-2">Premium</h3>
+                        <div class="text-3xl font-bold text-[#00377b] mb-1">₹9,999</div>
+                        <p class="text-gray-500 mb-6">12 months</p>
+                        <ul class="space-y-3 mb-6">
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                All Professional features
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Top placement in search results
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Dedicated account manager
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Premium badge on profile
+                            </li>
+                            <li class="flex items-start gap-2 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                Advanced analytics dashboard
+                            </li>
+                        </ul>
+                        <a href="../register/index.html?userType=advocate&plan=premium" class="inline-flex items-center justify-center h-9 px-4 text-sm font-medium rounded-md border bg-background shadow-xs hover:bg-[#f17313] hover:text-[#f17313]-foreground transition-all duration-200 w-full bg-transparent ">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#00377b] text-white border-t-4 border-[#001944] ">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-6">
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../about/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">About Us</a></li>
+                        <li><a href="../media-coverage/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Media Coverage</a></li>
+                        <li><a href="../contact/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Contact Us</a></li>
+                        <li><a href="../user-agreement/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">User Agreement</a></li>
+                        <li><a href="../privacy-policy/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Client Area</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../register/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Register</a></li>
+                        <li><a href="../login/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Login</a></li>
+                        <li><a href="../client-area/index.html#faqs" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">FAQ's</a></li>
+                        <li><a href="../client-area/index.html#how-it-works" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">How It Works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Advocate Area</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../advocate/register/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Register</a></li>
+                        <li><a href="../login/index.html?userType=advocate" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Login</a></li>
+                        <li><a href="../advocate-area/index.html#faqs" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">FAQ's</a></li>
+                        <li><a href="../advocate-area/index.html#how-it-works" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">How It Works</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Law School</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../law-colleges/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Search Colleges</a></li>
+                        <li><a href="../sawal-jawab/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Search a Sawaal</a></li>
+                        <li><a href="../sawal-jawab/index.html?mode=ask" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Ask a Sawaal</a></li>
+                    </ul>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mt-6 mb-4">Blogs</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../advocate/dashboard/index.html?section=blogs" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Post a Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Law Library</h3>
+                    <ul class="space-y-2">
+                        <li><a href="../law-library/legal-tips/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Legal Tips</a></li>
+                        <li><a href="../law-library/agreements/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Agreements</a></li>
+                        <li><a href="../law-library/areas-of-law/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Area of Law</a></li>
+                        <li><a href="../law-library/bare-acts/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Indian Bare Acts</a></li>
+                        <li><a href="../law-library/rules/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Rules</a></li>
+                        <li><a href="../law-library/judgements/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Judgments</a></li>
+                        <li><a href="../law-library/forms/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Legal Forms</a></li>
+                        <li><a href="../law-library/glossary/index.html" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Glossary</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Advertise</h3>
+                    <ul class="space-y-2 mb-6">
+                        <li><a href="../contact/index.html?context=advertise" class="text-white/90 hover:text-white transition-colors duration-200 text-sm hover:text-white transition-colors duration-200">Get in Touch</a></li>
+                    </ul>
+                    <h3 class="text-base font-bold text-white border-b-2 border-[#001944] pb-2 mb-4">Social</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="https://www.facebook.com/advocatekhoj" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white/90 hover:text-white transition-colors duration-200 text-sm " aria-label="Visit AdvocateKhoj on Facebook">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                Facebook
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/scjudgments" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white/90 hover:text-white transition-colors duration-200 text-sm " aria-label="Visit AdvocateKhoj on X">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                                X (Twitter)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/advocatekho" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-white/90 hover:text-white transition-colors duration-200 text-sm " aria-label="Visit AdvocateKhoj on LinkedIn">
+                                <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-[#001944] mt-10 pt-6">
+                <div class="text-center text-xs text-white/80 leading-relaxed">
+                    <p class="mb-2">Information provided on advocatekhoj.com is solely available at your request for informational purposes only and should not be interpreted as soliciting or advertisement.</p>
+                    <p>&copy; 2025 AdvocateKhoj. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-[#00377b] text-white rounded-full shadow-lg hover:bg-[#1453a3] transition-all duration-300 opacity-0 invisible z-50 flex items-center justify-center hover:scale-110 hover:bg-[#00377b]/90 " aria-label="Back to top">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path></svg>
+    </button>
+
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

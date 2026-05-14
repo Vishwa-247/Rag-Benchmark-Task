@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Admin Settings - AdvocateKhoj Admin</title>
+  <link rel="stylesheet" href="../../styles/tailwind.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-background text-foreground min-h-screen">
+  <!-- PHP Include: Header -->
+  <!-- <?php include '/include/site/admin-header.php'; ?> -->
+
+  <div class="flex min-h-screen">
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+      <div class="p-4 border-b border-sidebar-border">
+        <a href="../dashboard/" class="flex items-center gap-2 hover:opacity-85 transition-opacity">
+          <div class="w-8 h-8 bg-[#00377b] rounded-lg flex items-center justify-center hover:bg-[#00377b]/90 ">
+            <i class="fas fa-balance-scale text-white text-sm"></i>
+          </div>
+          <span class="font-bold text-lg text-sidebar-foreground">Admin Panel</span>
+        </a>
+      </div>
+      <nav class="p-4 space-y-1">
+        <a href="../it-admin/" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#00377b] text-white hover:bg-[#00377b]/90 ">
+          <i class="fas fa-cog w-5"></i>
+          <span>IT Admin</span>
+        </a>
+        <a href="../advocates/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-user-tie w-5"></i>
+          <span>Advocate Admin</span>
+        </a>
+        <a href="../clients/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-users w-5"></i>
+          <span>Client</span>
+        </a>
+        <a href="../marketing/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-chart-line w-5"></i>
+          <span>Marketing</span>
+        </a>
+        <a href="../adengine/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-ad w-5"></i>
+          <span>AdEngine</span>
+        </a>
+        <a href="../newsletter/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-envelope w-5"></i>
+          <span>Newsletter</span>
+        </a>
+        <a href="../law-school/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-graduation-cap w-5"></i>
+          <span>Law School</span>
+        </a>
+        <a href="../website/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sidebar-foreground hover:bg-muted transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-globe w-5"></i>
+          <span>Website</span>
+        </a>
+      </nav>
+      <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-sidebar-border">
+        <a href="../../login/" class="flex items-center gap-3 px-3 py-2 rounded-lg text-red-600 hover:bg-red-50 transition-colors hover:opacity-85 transition-opacity">
+          <i class="fas fa-sign-out-alt w-5"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Mobile Menu Toggle -->
+    <button id="mobile-menu-toggle" class="md:hidden fixed top-4 left-4 z-50 p-2 bg-[#00377b] text-white rounded-lg shadow-lg hover:bg-[#00377b]/90">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="flex-1 md:ml-64 p-4 md:p-8">
+      <div class="max-w-6xl mx-auto space-y-6">
+        <!-- Header -->
+        <div>
+          <h1 class="text-3xl font-bold text-gray-900">Settings</h1>
+          <p class="text-gray-600 mt-1">System configuration and information</p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="flex gap-2 flex-wrap">
+          <button class="tab-btn btn btn-default bg-[#00377b] text-white hover:bg-[#00377b]/90" data-tab="current-session">
+            Current Session
+          </button>
+          <button class="tab-btn btn btn-default btn-outline" data-tab="system-info">
+            System Information
+          </button>
+          <button class="tab-btn btn btn-default btn-outline" data-tab="system-variables">
+            System Variables
+          </button>
+          <button class="tab-btn btn btn-default btn-outline" data-tab="user-variables">
+            User Variables
+          </button>
+        </div>
+
+        <!-- Current Session Tab -->
+        <div id="current-session" class="tab-content card">
+          <div class="card-header bg-gray-50 border-b p-4">
+            <h2 class="card-title">Current Session</h2>
+          </div>
+          <div class="card-content p-6">
+            <!-- SERVER: GET /api/admin/session -->
+            <textarea readonly class="textarea font-mono text-xs h-96 resize-none bg-gray-50">Array ( [!tmp_ra!tid] => [sessionid] => 70c055965da32bc528ca2dc7f4526247 [operatorid] => 93441282fd60740124945531 [username] => MASTER [!meout] => 3 [permissions] => Array ( [ACCESS_KEY] => X [WEBSITE_TEMPLATE] => * [WEBSITE_USERS] => * [WEBSITE_DIRECTORY_CREATEMEDIA] => * [WEBSITE_TEMPLATE_REGISTERED] => X [WEBSITE_TEMPLATE] => * [WEBSITE_CONTENTS_TEMPLATES] => * [WEBSITE_CONTENTS_PUBLISH] => * [WEBSITE_CONTENTS_LIVEPAGE] => * [WEBSITE_CONTENTS_PREVIEW] => * [WEBSITE_CONTENTS] => * [WEBSITE_CATEGORY_CONTENTS] => * [WEBSITE_CATEGORY_MANAGEFILES] => * [SOCIETY_OPERATIONS] => * [SAWAALJAWAB] => * [OPERATIONS_WIDGETS] => * [OPERATIONS_STATISTICS] => * [OPERATIONS_STATE] => * [OPERATIONS_PRACTICECATEGORY] => * [OPERATIONS_PRACTICEAREA] => * [OPERATIONS_LANGUAGE] => * [OPERATIONS_HELPDESK] => * [OPERATIONS_GLOSSARY] => * [OPERATIONS_ECOMMERCE] => * [OPERATIONS_CITY] => * [OPERATIONS] => * [NEWSLETTER_SENTITEMS] => * [NEWSLETTER_DRAFTS] => * [NEWSLETTER_CATEGORY] => * [NEWSLETTER] => * [MARKETING_CAMPAIGNS] => * [MARKETING] => * [LAWCOLLEGEINFO] => * [LAWCOLLEGE] => * [ITADMINAREA_REGISTERED] => * [CLIENT_PROFILES] => * [CLIENT_CASES] => * [CLIENT] => * [BLOGS_MANAGEPOSTINGS] => * [BLOGS_CATEGORIES] => * [BLOGS] => * [ADVOCATE_REGISTERED] => * [ADVOCATE_FIRM_APPLICATION] => * [ADVOCATE_APPLICATION] => * [ADENGINE_BUSINESSDIR] => * [ADENGINE_ADS] => * [ADENGINE] => * [ADD_REMOVE_SPECIALIZATION] )</textarea>
+          </div>
+        </div>
+
+        <!-- System Info Tab -->
+        <div id="system-info" class="tab-content card hidden">
+          <div class="card-header bg-gray-50 border-b p-4">
+            <h2 class="card-title">System Information</h2>
+          </div>
+          <div class="card-content p-6 space-y-8">
+            <!-- Cache Status -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Cache Status</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Total files cached</div>
+                  <!-- SERVER: $cache_count -->
+                  <div class="text-2xl font-bold text-gray-900 mt-1">[CACHE_COUNT]</div>
+                  <form action="/api/admin/cache/flush" method="POST" class="mt-3">
+                    <button type="submit" class="btn btn-sm btn-outline w-full">Flush Cache</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <!-- Disk Space Status -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Disk Space Status</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Maximum Allowed</div>
+                  <!-- SERVER: $disk_max -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DISK_MAX]</div>
+                </div>
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Available Space</div>
+                  <!-- SERVER: $disk_available -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DISK_AVAILABLE]</div>
+                </div>
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Used Space</div>
+                  <!-- SERVER: $disk_used -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DISK_USED]</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Database Status -->
+            <div>
+              <h3 class="text-lg font-semibold text-gray-900 mb-4">Database Status</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Maximum Allowed</div>
+                  <!-- SERVER: $db_max -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DB_MAX]</div>
+                </div>
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Available Space</div>
+                  <!-- SERVER: $db_available -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DB_AVAILABLE]</div>
+                </div>
+                <div class="border rounded-lg p-4">
+                  <div class="text-sm text-gray-600">Used Space</div>
+                  <!-- SERVER: $db_used -->
+                  <div class="text-xl font-semibold text-gray-900 mt-1">[DB_USED]</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- System Variables Tab -->
+        <div id="system-variables" class="tab-content hidden space-y-6">
+          <div class="card">
+            <div class="card-header bg-gray-50 border-b p-4">
+              <h2 class="card-title">System Variables List</h2>
+            </div>
+            <div class="card-content p-6">
+              <div class="border rounded-lg overflow-hidden">
+                <div class="bg-gray-50 border-b p-3">
+                  <!-- SERVER: GET /api/admin/system-variables -->
+                  <select class="select w-full max-w-md" size="6" id="system-var-list">
+                    <option>SYSTEM_DIRECTORY_DELETE_BANNED</option>
+                    <option>SYSTEM_DIRECTORY_EDIT_ALLOWED</option>
+                    <option>SYSTEM_DIRECTORY_EDIT_BANNED</option>
+                    <option>SYSTEM_DIRECTORY_ROOT_ABSOLUTE</option>
+                    <option>SYSTEM_DIRECTORY_SEPARATOR</option>
+                    <option>SYSTEM_DIRECTORY_TEMPLATE_RELATIVE</option>
+                    <option>SYSTEM_DIRECTORY_VIEW_BANNED</option>
+                  </select>
+                </div>
+                <div class="p-4 flex gap-2 flex-wrap">
+                  <button class="btn btn-sm btn-outline">New System Variable</button>
+                  <button class="btn btn-sm btn-outline">Delete System Variable</button>
+                  <button class="btn btn-sm btn-outline">List All</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header bg-gray-50 border-b p-4">
+              <h2 class="card-title">System Variable Information</h2>
+            </div>
+            <div class="card-content p-6">
+              <form action="/api/admin/system-variables" method="POST" class="space-y-4">
+                <div>
+                  <label class="label block mb-2">Variable Name</label>
+                  <input type="text" name="var_name" class="input" placeholder="variable name should not contain space">
+                  <p class="text-xs text-red-600 mt-1">variable name should not contain space or special characters</p>
+                </div>
+
+                <div>
+                  <label class="label block mb-2">Variable Value</label>
+                  <textarea name="var_value" class="textarea" rows="5"></textarea>
+                </div>
+
+                <div>
+                  <label class="label block mb-2">Variable Description</label>
+                  <textarea name="var_desc" class="textarea" rows="5"></textarea>
+                </div>
+
+                <div class="text-sm text-gray-600">
+                  <p>Input Date : -NA-</p>
+                  <p>Last Modified : -NA- By : -NA-</p>
+                </div>
+
+                <button type="submit" class="btn btn-default bg-gray-700 hover:bg-gray-800 text-white">Save</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Variables Tab -->
+        <div id="user-variables" class="tab-content card hidden">
+          <div class="card-header bg-gray-50 border-b p-4">
+            <h2 class="card-title">User Variables</h2>
+          </div>
+          <div class="card-content p-6">
+            <p class="text-gray-600">User variable management coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Sidebar Overlay -->
+  <div id="sidebar-overlay" class="sidebar-overlay"></div>
+
+  <script>
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const tabId = btn.dataset.tab;
+        
+        // Update button styles
+        document.querySelectorAll('.tab-btn').forEach(b => {
+          b.classList.remove('bg-[#00377b]', 'text-white');
+          b.classList.add('btn-outline');
+        });
+        btn.classList.add('bg-[#00377b]', 'text-white');
+        btn.classList.remove('btn-outline');
+        
+        // Show selected tab
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.add('hidden');
+        });
+        document.getElementById(tabId).classList.remove('hidden');
+      });
+    });
+
+    // Mobile sidebar toggle
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('collapsed');
+      overlay.classList.toggle('visible');
+    });
+
+    overlay.addEventListener('click', () => {
+      sidebar.classList.add('collapsed');
+      overlay.classList.remove('visible');
+    });
+
+    // Initialize sidebar as collapsed on mobile
+    if (window.innerWidth < 768) {
+      sidebar.classList.add('collapsed');
+    }
+  </script>
+
+  <!-- PHP Include: Footer -->
+  <!-- <?php include '/include/site/admin-footer.php'; ?> -->
+</body>
+</html>
