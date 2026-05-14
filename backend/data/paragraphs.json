@@ -1,0 +1,56 @@
+[
+  {
+    "id": "p1",
+    "title": "Peak load absorption and autoscaling",
+    "text": "During peak load the system absorbs sudden traffic spikes by combining horizontal autoscaling with a short-lived queue. The queue depth triggers scale-out, while a token bucket rate limiter sheds excess requests to protect critical paths. A small percentage of best-effort traffic is dropped when the surge exceeds capacity.",
+    "tags": ["autoscaling", "traffic", "rate-limiting", "queue"]
+  },
+  {
+    "id": "p2",
+    "title": "Cache invalidation and thundering herd control",
+    "text": "Cache invalidation can cause a thundering herd when many clients miss simultaneously. The mitigation is request coalescing (singleflight) plus stale-while-revalidate, which serves slightly stale content while one request recomputes the value. A jittered TTL reduces synchronized expirations.",
+    "tags": ["cache", "invalidation", "thundering-herd", "swr"]
+  },
+  {
+    "id": "p3",
+    "title": "Downstream latency spikes and backpressure",
+    "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+    "tags": ["timeouts", "circuit-breaker", "backpressure", "retries"]
+  },
+  {
+    "id": "p4",
+    "title": "Replica lag and failover consistency",
+    "text": "Read replicas can lag the primary during failover, causing read-after-write anomalies. The system routes consistency-sensitive reads to the primary until replica lag falls below a threshold. Split-brain prevention uses fencing tokens and leader leases.",
+    "tags": ["replication", "failover", "consistency", "database"]
+  },
+  {
+    "id": "p5",
+    "title": "Network saturation versus compute load",
+    "text": "Peak network load is different from CPU load. When bandwidth saturates, the mitigation focuses on CDN offload, response compression, and request batching instead of CPU autoscaling. Edge caching reduces origin fan-in during a flash crowd.",
+    "tags": ["network", "cdn", "compression", "flash-crowd"]
+  },
+  {
+    "id": "p6",
+    "title": "Multi-tenant fairness and noisy neighbors",
+    "text": "Multi-tenant systems prevent noisy neighbors by enforcing per-tenant rate limits and priority queues. A fairness scheduler ensures premium tenants receive reserved throughput, while burst credits allow temporary surges without starvation.",
+    "tags": ["multi-tenant", "fairness", "priority-queue", "rate-limiting"]
+  },
+  {
+    "id": "p7",
+    "title": "Batch jobs and idempotent retries",
+    "text": "Batch processors rely on idempotent writes so retries do not duplicate side effects. A dead-letter queue captures poison messages and caps retry counts. This avoids runaway retries that can resemble a load spike during recovery.",
+    "tags": ["batch", "idempotency", "dead-letter", "retries"]
+  },
+  {
+    "id": "p8",
+    "title": "SLOs, error budgets, and adaptive throttling",
+    "text": "When the latency SLO is at risk, the system dynamically throttles non-essential endpoints to preserve error budget. This is paired with real-time percentiles (p95/p99) and tracing to isolate the hot shard causing tail latency.",
+    "tags": ["slo", "error-budget", "latency", "observability"]
+  },
+  {
+    "id": "p9",
+    "title": "Queue buildup and overload control",
+    "text": "If queue backlog grows faster than workers can drain, the system raises backpressure signals and temporarily disables expensive features. Overload control is triggered by sustained queue depth and rising processing time, not by single spikes.",
+    "tags": ["queue", "backpressure", "overload", "latency"]
+  }
+]

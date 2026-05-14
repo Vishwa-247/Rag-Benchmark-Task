@@ -1,0 +1,211 @@
+{
+  "run_id": "54aa3335-40ad-4140-b374-ca51e75284c4",
+  "created_at": "2026-05-14T12:17:38.762545+00:00",
+  "attempts": 1,
+  "results": [
+    {
+      "query": "How does the system handle peak load without dropping requests?",
+      "expanded_query": "How does the system handle peak load without dropping requests? autoscaling rate limit queue depth load shedding",
+      "strategy_a": [
+        {
+          "id": "p1",
+          "text": "During peak load the system absorbs sudden traffic spikes by combining horizontal autoscaling with a short-lived queue. The queue depth triggers scale-out, while a token bucket rate limiter sheds excess requests to protect critical paths. A small percentage of best-effort traffic is dropped when the surge exceeds capacity.",
+          "score": 0.7126070289184155,
+          "metadata": {
+            "source": "local",
+            "tags": "autoscaling, traffic, rate-limiting, queue",
+            "title": "Peak load absorption and autoscaling"
+          }
+        },
+        {
+          "id": "p5",
+          "text": "Peak network load is different from CPU load. When bandwidth saturates, the mitigation focuses on CDN offload, response compression, and request batching instead of CPU autoscaling. Edge caching reduces origin fan-in during a flash crowd.",
+          "score": 0.5625375124807996,
+          "metadata": {
+            "source": "local",
+            "tags": "network, cdn, compression, flash-crowd",
+            "title": "Network saturation versus compute load"
+          }
+        },
+        {
+          "id": "p3",
+          "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+          "score": 0.5157866698409161,
+          "metadata": {
+            "source": "local",
+            "tags": "timeouts, circuit-breaker, backpressure, retries",
+            "title": "Downstream latency spikes and backpressure"
+          }
+        }
+      ],
+      "strategy_b": [
+        {
+          "id": "p1",
+          "text": "During peak load the system absorbs sudden traffic spikes by combining horizontal autoscaling with a short-lived queue. The queue depth triggers scale-out, while a token bucket rate limiter sheds excess requests to protect critical paths. A small percentage of best-effort traffic is dropped when the surge exceeds capacity.",
+          "score": 0.802417150679032,
+          "metadata": {
+            "source": "local",
+            "tags": "autoscaling, traffic, rate-limiting, queue",
+            "title": "Peak load absorption and autoscaling"
+          }
+        },
+        {
+          "id": "p9",
+          "text": "If queue backlog grows faster than workers can drain, the system raises backpressure signals and temporarily disables expensive features. Overload control is triggered by sustained queue depth and rising processing time, not by single spikes.",
+          "score": 0.6128450447216468,
+          "metadata": {
+            "source": "local",
+            "tags": "queue, backpressure, overload, latency",
+            "title": "Queue buildup and overload control"
+          }
+        },
+        {
+          "id": "p5",
+          "text": "Peak network load is different from CPU load. When bandwidth saturates, the mitigation focuses on CDN offload, response compression, and request batching instead of CPU autoscaling. Edge caching reduces origin fan-in during a flash crowd.",
+          "score": 0.5608173589302751,
+          "metadata": {
+            "source": "local",
+            "tags": "network, cdn, compression, flash-crowd",
+            "title": "Network saturation versus compute load"
+          }
+        }
+      ]
+    },
+    {
+      "query": "What mitigates a thundering herd after cache invalidation?",
+      "expanded_query": "What mitigates a thundering herd after cache invalidation? stale-while-revalidate request coalescing singleflight",
+      "strategy_a": [
+        {
+          "id": "p2",
+          "text": "Cache invalidation can cause a thundering herd when many clients miss simultaneously. The mitigation is request coalescing (singleflight) plus stale-while-revalidate, which serves slightly stale content while one request recomputes the value. A jittered TTL reduces synchronized expirations.",
+          "score": 0.6921928682869097,
+          "metadata": {
+            "source": "local",
+            "tags": "cache, invalidation, thundering-herd, swr",
+            "title": "Cache invalidation and thundering herd control"
+          }
+        },
+        {
+          "id": "p3",
+          "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+          "score": 0.4365575287397587,
+          "metadata": {
+            "source": "local",
+            "tags": "timeouts, circuit-breaker, backpressure, retries",
+            "title": "Downstream latency spikes and backpressure"
+          }
+        },
+        {
+          "id": "p7",
+          "text": "Batch processors rely on idempotent writes so retries do not duplicate side effects. A dead-letter queue captures poison messages and caps retry counts. This avoids runaway retries that can resemble a load spike during recovery.",
+          "score": 0.4103350955644247,
+          "metadata": {
+            "source": "local",
+            "tags": "batch, idempotency, dead-letter, retries",
+            "title": "Batch jobs and idempotent retries"
+          }
+        }
+      ],
+      "strategy_b": [
+        {
+          "id": "p2",
+          "text": "Cache invalidation can cause a thundering herd when many clients miss simultaneously. The mitigation is request coalescing (singleflight) plus stale-while-revalidate, which serves slightly stale content while one request recomputes the value. A jittered TTL reduces synchronized expirations.",
+          "score": 0.8177191408679,
+          "metadata": {
+            "source": "local",
+            "tags": "cache, invalidation, thundering-herd, swr",
+            "title": "Cache invalidation and thundering herd control"
+          }
+        },
+        {
+          "id": "p3",
+          "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+          "score": 0.4952586181076625,
+          "metadata": {
+            "source": "local",
+            "tags": "timeouts, circuit-breaker, backpressure, retries",
+            "title": "Downstream latency spikes and backpressure"
+          }
+        },
+        {
+          "id": "p7",
+          "text": "Batch processors rely on idempotent writes so retries do not duplicate side effects. A dead-letter queue captures poison messages and caps retry counts. This avoids runaway retries that can resemble a load spike during recovery.",
+          "score": 0.3952282757140704,
+          "metadata": {
+            "source": "local",
+            "tags": "batch, idempotency, dead-letter, retries",
+            "title": "Batch jobs and idempotent retries"
+          }
+        }
+      ]
+    },
+    {
+      "query": "How do we prevent overload when downstream latency spikes and queues back up?",
+      "expanded_query": "How do we prevent overload when downstream latency spikes and queues back up? bulkhead backpressure retries exponential",
+      "strategy_a": [
+        {
+          "id": "p9",
+          "text": "If queue backlog grows faster than workers can drain, the system raises backpressure signals and temporarily disables expensive features. Overload control is triggered by sustained queue depth and rising processing time, not by single spikes.",
+          "score": 0.6809004761598799,
+          "metadata": {
+            "source": "local",
+            "tags": "queue, backpressure, overload, latency",
+            "title": "Queue buildup and overload control"
+          }
+        },
+        {
+          "id": "p1",
+          "text": "During peak load the system absorbs sudden traffic spikes by combining horizontal autoscaling with a short-lived queue. The queue depth triggers scale-out, while a token bucket rate limiter sheds excess requests to protect critical paths. A small percentage of best-effort traffic is dropped when the surge exceeds capacity.",
+          "score": 0.6252075256067691,
+          "metadata": {
+            "source": "local",
+            "tags": "autoscaling, traffic, rate-limiting, queue",
+            "title": "Peak load absorption and autoscaling"
+          }
+        },
+        {
+          "id": "p3",
+          "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+          "score": 0.6229598419970253,
+          "metadata": {
+            "source": "local",
+            "tags": "timeouts, circuit-breaker, backpressure, retries",
+            "title": "Downstream latency spikes and backpressure"
+          }
+        }
+      ],
+      "strategy_b": [
+        {
+          "id": "p3",
+          "text": "When downstream latency spikes, the API enforces timeouts and circuit breakers to prevent cascading failure. Backpressure is applied by bounding the in-flight request pool, and retries are capped with exponential backoff to avoid retry storms. Bulkheads isolate slow dependencies.",
+          "score": 0.7673889258903982,
+          "metadata": {
+            "source": "local",
+            "tags": "timeouts, circuit-breaker, backpressure, retries",
+            "title": "Downstream latency spikes and backpressure"
+          }
+        },
+        {
+          "id": "p9",
+          "text": "If queue backlog grows faster than workers can drain, the system raises backpressure signals and temporarily disables expensive features. Overload control is triggered by sustained queue depth and rising processing time, not by single spikes.",
+          "score": 0.6787905515593429,
+          "metadata": {
+            "source": "local",
+            "tags": "queue, backpressure, overload, latency",
+            "title": "Queue buildup and overload control"
+          }
+        },
+        {
+          "id": "p1",
+          "text": "During peak load the system absorbs sudden traffic spikes by combining horizontal autoscaling with a short-lived queue. The queue depth triggers scale-out, while a token bucket rate limiter sheds excess requests to protect critical paths. A small percentage of best-effort traffic is dropped when the surge exceeds capacity.",
+          "score": 0.6252025968938175,
+          "metadata": {
+            "source": "local",
+            "tags": "autoscaling, traffic, rate-limiting, queue",
+            "title": "Peak load absorption and autoscaling"
+          }
+        }
+      ]
+    }
+  ]
+}
